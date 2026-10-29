@@ -1,0 +1,104 @@
+[
+  {
+    "name": "klaviyo_list_profiles",
+    "description": "Search contacts by email, name, or custom attributes. Returns profile IDs, emails, names, and properties with pagination support.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Klaviyo private API key"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Filter string in Klaviyo filter syntax (e.g., \"equals(email,\\\"user@example.com\\\")\")"
+        },
+        "page_size": {
+          "type": "number",
+          "description": "Number of profiles per page (default 20, max 100)"
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "klaviyo_get_profile",
+    "description": "Get a contact's full profile by ID. Returns email, name, phone, custom properties, list memberships, and subscription status.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Klaviyo private API key"
+        },
+        "profile_id": {
+          "type": "string",
+          "description": "Klaviyo profile ID"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "profile_id"
+      ]
+    }
+  },
+  {
+    "name": "klaviyo_list_lists",
+    "description": "Get all email lists in your account. Returns list IDs, names, subscriber counts, and creation dates.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Klaviyo private API key"
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "klaviyo_list_campaigns",
+    "description": "Search campaigns by status (draft, scheduled, sent). Returns campaign IDs, names, status, send dates, and performance metrics.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Klaviyo private API key"
+        },
+        "filter": {
+          "type": "string",
+          "description": "Filter by status (e.g., \"equals(messages.channel,\\\"email\\\")\")"
+        }
+      },
+      "required": [
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "klaviyo_get_campaign",
+    "description": "Get a campaign's full details by ID. Returns name, status, subject line, recipient list, performance stats, and send history.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "_apiKey": {
+          "type": "string",
+          "description": "Klaviyo private API key"
+        },
+        "campaign_id": {
+          "type": "string",
+          "description": "Klaviyo campaign ID"
+        }
+      },
+      "required": [
+        "_apiKey",
+        "campaign_id"
+      ]
+    }
+  }
+]
