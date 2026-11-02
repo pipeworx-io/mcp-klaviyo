@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-klaviyo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Klaviyo MCP Pack — wraps the Klaviyo API for email marketing",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "klaviyo",
     "gatewaySlug": "klaviyo",
-    "sourceHash": "v1-7cf9717ec1566a854c9da986375f027a374c637be3599f16909193c206bcb258",
-    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
+    "sourceHash": "v1-d91673b8c9f8b8e3839735f565c20f704609c65ea58583054c0094b2c3163e7b",
+    "sourceCommit": "236b0a46d91f343fe094da9f499c378e88f78312"
   }
 }
